@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Administrator Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Administrator Dashboard</h1>
+    <div id="tabs">
+      <button class="tablinks" onclick="openTab(event, 'orders')">Orders</button>
+      <button class="tablinks" onclick="openTab(event, 'payments')">Payments</button>
+      <button class="tablinks" onclick="openTab(event, 'users')">Users</button>
+      <button class="tablinks" onclick="openTab(event, 'products')">Products</button>
+      <button class="tablinks" onclick="openTab(event, 'traffic')">Traffic</button>
+      <button class="tablinks" onclick="openTab(event, 'messages')">Messages</button>
+    </div>
+    <div id="orders" class="tabcontent">
+      <h2>Orders</h2>
+      <table>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer Name</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>John Smith</td>
+          <td>Call of Duty: Modern Warfare</td>
+          <td>$59.99</td>
+          <td>Shipped</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Doe</td>
+          <td>Spider-Man: Miles Morales</td>
+          <td>$49.99</td>
+          <td>Pending</td>
+        </tr>
+      </table>
+    </div>
+    <div id="payments" class="tabcontent">
+      <h2>Payments</h2>
+      <table>
+        <tr>
+          <th>Payment ID</th>
+          <th>Customer Name</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>John Smith</td>
+          <td>$59.99</td>
+          <td>Successful</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Doe</td>
+          <td>$49.99</td>
+          <td>Pending</td>
+        </tr>
+      </table>
+    </div>
+    <div id="users" class="tabcontent">
+      <h2>Users</h2>
+      <table>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Registration Date</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>John Smith</td>
+          <td>john@example.com</td>
+          <td>2023-02-24</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Doe</td>
+          <td>jane@example.com</td>
+          <td>2023-02-25</td>
+        </tr>
+      </table>

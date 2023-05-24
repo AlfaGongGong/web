@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #f1f1f1;
+    width: 20%;
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li a {
+    display: block;
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.sidebar li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.main-content {
+    padding: 20px;
+    width: 80%;
+}
+
+.tabcontent {
+    display: none;
+}
+
+#chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#chat-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#chat-form button {
+    padding: 10px;
+    border: 
