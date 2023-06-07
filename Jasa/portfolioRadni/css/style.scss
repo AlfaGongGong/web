@@ -1,8 +1,8 @@
 $hcolor:#8C2A32;
-$backgroundOpaque: #d9d9d986;
+$backgroundOpaque:#2402217f;
 $color:#D9D9D9;
 $buttonBackground:#BF0F3E;
-$colorHover: #240221;
+$colorHover: #8C2A32;
 $buttonBackgroundHover: #8C2A32;
 $borderColor:$buttonBackground;
 $mobile : 576px;
@@ -16,15 +16,15 @@ $desktop : 1200px;
   padding: 0;
 }
 
+html,
 body {
   font-family: "Alegreya", serif;
+  background-color: $backgroundOpaque;
+  color: $color;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  height: 100%;
 }
-
-p {
-  font-size: 22px;
-  line-height: 26px;
-}
-
 a {
   text-decoration: none;
   color: $color;
@@ -35,7 +35,7 @@ a {
 /* dark*/
 
 a:hover {
-  color: #240221;
+  color: $colorHover;
   /* dark*/
 }
 
@@ -48,7 +48,7 @@ ul {
 .primary-button {
   display: inline-block;
   background-color: $buttonBackground;
-  color: $color;
+  color: $hcolor;
   letter-spacing: 1px;
   font-size: 10px;
   padding: 10px;
@@ -60,15 +60,17 @@ ul {
 
 /* dark*/
 
-.primary-button a:hover {
-  background-color: #8C2A32;
-  border: 1px solid #D9D9D9;
+.primary-button,
+a:hover {
+  background-color: $buttonBackgroundHover;
+  border: 1px solid $color;
   transition: all 0.2s linear;
 }
 
 /* dark*/
 
-.heading h4 {
+.heading,
+h4 {
   margin-bottom: 60px;
   margin-top: 0px;
   font-size: 25px;
@@ -118,7 +120,7 @@ ul {
   text-decoration: none;
   font-size: 24px;
   background: $backgroundOpaque;
-  color: $buttonBackground;
+  color: $color;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -149,8 +151,8 @@ ul {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background: $color;
-  color: $buttonBackground;
+  background: $buttonBackground;
+  color: $color;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -223,7 +225,8 @@ ul {
   }
 }
 
-.ˇcontainer .ˇcontainer-fluid {
+.container,
+.container-fluid {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -233,8 +236,6 @@ ul {
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-  background: $backgroundOpaque;
-  color: $color;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -246,14 +247,15 @@ panel {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   height: auto;
   height: fit-content;
   height: -moz-fit-content;
   height: -webkit-fit-content;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   max-height: max-content;
-
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .panel__content {
@@ -261,6 +263,10 @@ panel {
   transform: scale(0.7) rotateX(-230deg);
   transform-origin: center 80%;
   opacity: 0;
+  background-color: $backgroundOpaque;
+  color: $color;
+  border-radius: 25px;
+
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -401,7 +407,10 @@ i.fa-brands.fa-beat.fa-code::before {
   align-content: center;
   flex-wrap: wrap;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background-color: rgba(180, 180, 180, 0.4588235294);
+  background-color: $backgroundOpaque;
+  color: $color;
+  border-radius: 25px;
+
   padding: 0px 60px;
   margin: 10vh auto 0 auto;
 }
@@ -418,20 +427,27 @@ i.fa-brands.fa-beat.fa-code::before {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    align-content: center;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
   }
 }
 
-.home-content h1 {
+.home-content,
+h1 {
   padding-top: 120px;
-  font-size: 30px;
+  font-size: 3.2vw;
   color: #8C2A32;
   font-weight: 300;
 }
 
-.home-content .home-box-content {
+.home-content,
+.home-box-content {
   margin-top: 45px;
-  background-color: rgba(180, 180, 180, 0.4588235294);
-  border: $borderColor solid 2px;
+  background-color: $backgroundOpaque;
+  color: $color;
+  border-radius: 25px;
+
   border-radius: 25px;
   position: relative;
   right: -100px;
@@ -452,7 +468,9 @@ i.fa-brands.fa-beat.fa-code::before {
 }
 
 @media screen and (max-width: $mobile) {
-  .home-content .home-box-content {
+
+  .home-content,
+  .home-box-content {
     margin: 0px;
     padding: 0px;
     height: auto;
@@ -462,20 +480,23 @@ i.fa-brands.fa-beat.fa-code::before {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    position: initial;
 
   }
 }
 
-.home-content .left-text {
+.home-content,
+.left-text {
   float: left;
   width: 60%;
 }
 
-.home-content .left-text h4 {
+.home-content,
+.left-text h4 {
   display: inline-block;
   padding-bottom: 5px;
-  font-size: 20px;
-  color: #8C2A32;
+  font-size: 1.0417vw;
+  color: $hcolor;
   font-weight: 400;
   letter-spacing: 1px;
   margin-top: 0px;
@@ -484,27 +505,33 @@ i.fa-brands.fa-beat.fa-code::before {
 
 /*dark*/
 
-.home-content .left-text p {
+.home-content,
+.left-text,
+ p {
   color: #D9D9D9;
-  margin-bottom: 25px;
+  margin-bottom: 1.3021vw;
 }
 
 /*dark*/
 
-.home-content .right-image {
-  float: right;
+.home-content{
+ border: 2px solid $borderColor;
 }
 
-.right-image #profilna {
-  width: 150px;
-  height: 150px;
+.right-image {
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
   margin: 20px;
   border: $borderColor solid 2px;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 100%;
+  background-color: #66696E;
   min-height: 90px;
   min-width: 90px;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
+  background-image: url(../img/profilna.png);
+  background-size: cover;
 }
 
 /*dark*/
@@ -513,55 +540,103 @@ i.fa-brands.fa-beat.fa-code::before {
 
 .about-content {
   height: fit-content;
-  background-color: rgba(180, 180, 180, 0.4588235294);
+  background-color: $backgroundOpaque;
   padding: 0px 60px;
   margin: 0 auto;
   width: 100%;
 }
 
-.about-content .heading h1 {
+/*dark*/
+
+.about-content,
+.heading,
+h1 {
   color: #8C2A32;
   font-size: 30px;
   font-weight: 300;
 }
 
-.about-content .about-box-text {
-  background-color: rgba(180, 180, 180, 0.4588235294);
+/*dark*/
+
+.about-content,
+.about-box-text {
+  background-color: $backgroundOpaque;
+  color: $color;
+  border-radius: 25px;
+
   padding: 30px;
-  border: #8C2A32 solid 2px;
+  border: $borderColor solid 2px;
   border-radius: 25px;
   position: relative;
   left: -60px;
-  display: block;
-  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-around;
+  margin-right: 20px;
+  height: auto;
+  height: fit-content;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  max-height: max-content;
+  min-width: 80vw;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   width: 100%;
   padding-bottom: 5px;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 120px;
   letter-spacing: 1px;
   margin-top: 15px;
   margin-bottom: 15px;
 
 }
 
-.about-content .about-box-text p {
-  color: #D9D9D9;
-  margin-bottom: 20px;
-  width: 100%;
-  background-color: rgba(180, 180, 180, 0.4588235294);
+/*dark*/
+@media screen and (max-width: $mobile) {
+
+  .about-content,
+  .about-box-text {
+
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: initial;
+  }
 }
+
+.about-content,
+.about-box-text,
+p {
+  color: $color;
+  height: auto;
+  height: fit-content;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  max-height: max-content;
+  min-width: 80vw;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  text-align: justify;
+  font-display: swap;
+  font-size: 20px;
+  font-weight: 300;
+  position: initial;
+}
+
+/*dark*/
 
 /* Section PROJECTS */
 
 .projects-content {
 
   height: fit-content;
-  background-color: rgba(180, 180, 180, 0.4588235294);
-  color: #8C2A32;
+  color: $color;
   padding: 0px 60px;
   position: relative;
   margin: 0 auto;
-  width: 160%;
+  width: 100%;
 }
 
 .projects-content .heading {
