@@ -5,6 +5,10 @@ $buttonBackground:#BF0F3E;
 $colorHover: #240221;
 $buttonBackgroundHover: #8C2A32;
 $borderColor:$buttonBackground;
+$mobile : 576px;
+$tablet : 768px;
+$laptop : 992px;
+$desktop : 1200px;
 
 * {
   box-sizing: border-box;
@@ -207,13 +211,13 @@ ul {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width:$mobile) {
   .burger__patty {
     transform: scale(0.8);
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: $mobile) {
   .burger--active .burger__patty {
     transform: scale(0.8) rotate(90deg);
   }
@@ -335,7 +339,9 @@ panel {
   letter-spacing: 1px;
   font-size: 18px;
   flex-direction: column;
-} /*dark*/
+}
+
+/*dark*/
 
 i.fa-brands.fa-beat.fa-html5::before {
   color: #dd4b25;
@@ -384,7 +390,7 @@ i.fa-brands.fa-beat.fa-code::before {
 .home-content {
   height: -moz-fit-content;
   height: fit-content;
-  height:auto;
+  height: auto;
   height: -webkit-fit-content;
   max-height: max-content;
   width: 100%;
@@ -396,13 +402,26 @@ i.fa-brands.fa-beat.fa-code::before {
   align-content: center;
   flex-wrap: wrap;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
- background-color: rgba(180, 180, 180, 0.4588235294);
+  background-color: rgba(180, 180, 180, 0.4588235294);
   padding: 0px 60px;
   margin: 10vh auto 0 auto;
-}/*dark*/
-@media screen and (max-width: 768px) {
-  
 }
+
+/*dark*/
+@media screen and (max-width: $mobile) {
+  .home-content {
+    padding: 0px;
+    margin: 10vh auto 0 auto;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .home-content h1 {
   padding-top: 120px;
   font-size: 30px;
@@ -431,6 +450,21 @@ i.fa-brands.fa-beat.fa-code::before {
   max-height: max-content;
   width: 100%;
   min-width: 80vw;
+}
+
+@media screen and (max-width: $mobile) {
+  .home-content .home-box-content {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+  }
 }
 
 .home-content .left-text {
