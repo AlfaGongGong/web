@@ -1,0 +1,270 @@
+/* Color Theme light */
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgb(214, 254, 255);
+  color: rgb(63, 87, 182);
+  font-size: 16px;
+}
+
+.site-header {
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#headingNavbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(214, 254, 255);
+  flex-direction: column;
+  min-width: 320px;
+  margin: 0px;
+}
+
+#brand {
+  text-decoration: none;
+  color: rgb(63, 87, 182);
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: flex-end;
+  min-width: 320px;
+  margin-bottom: 20px;
+}
+
+#branding {
+  color: rgb(63, 87, 182);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#branding :hover {
+  color: rgb(238, 52, 5);
+}
+
+a.cart,
+a.login-button {
+  text-decoration: none;
+  color: rgb(63, 87, 182);
+  align-items: center;
+  min-width: 320px;
+  margin-bottom: 20px;
+}
+
+a.cart:hover,
+a.login-button:hover {
+  color: rgb(238, 52, 5);
+}
+
+.fa,
+.fa-cart-shopping,
+.fa-user,
+.fa-bars,
+.fa-search {
+  color: rgb(63, 87, 182);
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.fa:hover,
+.fa-cart-shopping:hover,
+.fa-user:hover,
+.fa-bars:hover,
+.fa-search:hover {
+  color: rgb(238, 52, 5);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-navigation {
+  *zoom: 1;
+  margin-top: 30px;
+  position: relative;
+  z-index: 999;
+  clear: both;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.main-navigation:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+.main-navigation .toggle-menu {
+  float: left;
+  border: none;
+  padding: 30px 20px;
+  background: transparent;
+  outline: none;
+}
+
+@media screen and (max-width: 990px) {
+  .main-navigation .toggle-menu {
+    display: block;
+  }
+}
+@media screen and (min-width: 991px) {
+  .main-navigation .toggle-menu {
+    display: none;
+  }
+}
+.main-navigation > .menu {
+  list-style: none;
+  float: left;
+  *zoom: 1;
+}
+
+.main-navigation > .menu:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+@media screen and (min-width: 991px) {
+  .main-navigation > .menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 991px) {
+  .main-navigation > .menu {
+    display: none;
+  }
+}
+.main-navigation > .menu li {
+  float: left;
+}
+
+.main-navigation > .menu li a {
+  display: block;
+  padding: 30px 15px;
+  font-size: 16px;
+  font-size: 1.1428571429em;
+  color: rgb(63, 87, 182);
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.main-navigation > .menu li a:after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  color: rgb(63, 87, 182);
+  font-weight: 300;
+}
+
+.main-navigation > .menu li.home {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.main-navigation > .menu li.home a {
+  padding: 30px 0;
+  position: static;
+}
+
+.main-navigation > .menu li.home a:after {
+  position: absolute;
+  right: 0;
+}
+
+.main-navigation > .menu li.current-menu-item a,
+.main-navigation > .menu li:hover a {
+  color: rgb(63, 87, 182);
+  border-bottom: 2px solid rgb(46, 120, 70);
+}
+
+.mobile-navigation {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  padding: 10px 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: none;
+}
+
+@media screen and (min-width: 991px) {
+  .mobile-navigation {
+    display: none !important;
+  }
+}
+.mobile-navigation .menu {
+  list-style: none;
+}
+
+.mobile-navigation .menu a {
+  padding: 10px 20px;
+  display: block;
+}
+
+.search-form {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+}
+
+@media screen and (max-width: 480px) {
+  .search-form {
+    width: 200px;
+  }
+}
+.search-form label {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 35px;
+  left: 20px;
+}
+.search-form label .fa-search {
+  color: rgb(63, 87, 182);
+}
+
+.search-form input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  outline: none;
+  padding-left: 50px;
+  background: #eeeeee;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: inset 1px 0 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  color: rgb(63, 87, 182);
+}
+
+.search-form input:hover,
+.search-form input:focus {
+  background-color: white;
+}
+
+@media screen and (max-width: 640px) {
+  .right-section a {
+    display: block;
+    text-align: right;
+    margin-bottom: 5px;
+  }
+}/*# sourceMappingURL=styles.css.map */

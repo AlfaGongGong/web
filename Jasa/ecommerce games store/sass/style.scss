@@ -8,19 +8,32 @@
 /*=========================================== 
  * Importing CSS Libraries
  *===========================================*/
- @import 	"libs/settings",
- 			"libs/mixins",
- 			"libs/normalize",
- 			"libs/global",
- 			"libs/components",
+@import "libs/settings",
+"libs/mixins",
+"libs/normalize",
+"libs/global",
+"libs/components",
 
- 			// importing bootstrap grid framework
- 			"libs/bootstrap-grid/settings",
- 			"libs/bootstrap-grid/mixins",
- 			"libs/bootstrap-grid/grid",
+// importing bootstrap grid framework
+"libs/bootstrap-grid/settings",
+"libs/bootstrap-grid/mixins",
+"libs/bootstrap-grid/grid",
 
-			// importing layout styles
- 			"layout/header",
- 			"layout/content",
- 			"layout/footer";
-			
+// importing layout styles
+"layout/header",
+"layout/content",
+"layout/footer";
+
+#logo {
+	margin-right: 10px;
+	height: 100px;
+	width: 100px;
+	background-image: url("images/logo.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: 50%;
+
+
+}
