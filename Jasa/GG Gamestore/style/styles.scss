@@ -410,12 +410,10 @@ label input {
     position: relative;
     margin-top: -40px;
     margin-bottom: 30px;
-    background: #2b2b2b;
+    background: $backgroundHover;
 }
 
-.home-slider .slides {
-    *zoom: 1;
-}
+
 
 .home-slider .slides:after {
     content: " ";
@@ -460,7 +458,7 @@ label input {
 }
 
 .home-slider .flex-control-nav li a.flex-active {
-    background-color: #45b77d;
+    background-color: $textHover;
 }
 
 .home-slider .slide-content {
@@ -483,17 +481,15 @@ label input {
 }
 
 .home-slider .slide-title {
-    font-size: 65px;
-    font-size: 4.6428571429em;
+    font-size: 30px;
     font-weight: 300;
-    color: white;
+    color: $text;
     margin-bottom: 10px;
 }
 
 .home-slider .slide-subtitle {
-    font-size: 24px;
-    font-size: 1.7142857143em;
-    color: #45b77d;
+    font-size: 20px;
+    color: $heading;
     margin-bottom: 30px;
     display: block;
 }
