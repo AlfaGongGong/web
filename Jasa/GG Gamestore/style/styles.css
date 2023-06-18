@@ -736,4 +736,87 @@ section header .all {
   padding-left: 30px;
   margin-left: 30px;
   margin: 30px 0 30px 30px;
+}
+
+.site-footer {
+  background-color: #2b2b2b;
+  padding: 50px 0;
+  font-size: 12px;
+  font-size: 0.8571428571em;
+}
+
+.site-footer a {
+  color: #898e90;
+  transition: 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #45b77d;
+}
+
+.site-footer .widget {
+  margin-bottom: 30px;
+}
+
+.site-footer .widget-title {
+  color: white;
+  font-size: 15px;
+  font-size: 1.0714285714rem;
+  font-weight: 400;
+}
+
+.site-footer .colophon {
+  margin-top: 80px;
+  *zoom: 1;
+}
+
+.site-footer .colophon:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+.site-footer .colophon .copy {
+  float: left;
+  margin-top: 10px;
+}
+
+.site-footer .colophon .social-links {
+  float: right;
+}
+
+.site-footer .newsletter-form input[type=text] {
+  padding: 10px 20px;
+  color: white;
+  width: 70%;
+  border-width: 2px;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.site-footer .newsletter-form input[type=text]:hover,
+.site-footer .newsletter-form input[type=text]:focus {
+  border-color: #45b77d;
+}
+
+.site-footer .newsletter-form input[type=submit] {
+  width: 20%;
+  border: 2px solid #45b77d;
+  transition: 0.3s ease;
+}
+
+.site-footer .newsletter-form input[type=submit]:hover,
+.site-footer .newsletter-form input[type=submit]:focus {
+  background-color: #69c697;
+}
+
+.site-footer .social-links a {
+  line-height: 2;
+}
+
+.site-footer .social-links a:hover {
+  background-color: white;
+  color: #898e90;
 }/*# sourceMappingURL=styles.css.map */
