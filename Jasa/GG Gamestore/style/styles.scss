@@ -30,7 +30,7 @@ $background: rgba(214, 254, 255, 1);
 $text: rgba(63, 87, 182, 1);
 $backgroundHover: rgba(12, 1, 5, 1);
 $textHover: rgba(238, 52, 5, 1);
-$heading: rgba(46, 120, 70, 1);
+$header: rgba(46, 120, 70, 1);
 
 
 html,
@@ -94,7 +94,7 @@ img.logo {
   margin-right: 10px;
   border-radius: 50%;
   background-color: $background;
-  border: 3px solid $heading;
+  border: 3px solid $header;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   box-sizing: border-box;
@@ -112,7 +112,7 @@ img.logo {
 }
 
 .logo-text {
-  color: $heading;
+  color: $header;
   text-decoration: none;
   font-family: 'Bebas Neue', cursive;
   font-size: 40px;
@@ -443,6 +443,7 @@ label input {
 .home-slider .slide-content {
   float: left;
   width: 40%;
+  display: contents;
 }
 
 @media screen and (max-width: 768px) {
@@ -452,12 +453,85 @@ label input {
   }
 }
 
+
 @media screen and (max-width: 480px) {
   .home-slider .slide-content {
     width: 100%;
     margin-bottom: 30px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .home-slider .slide-content {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .home-slider .slide-content {
+    padding-right: 0;
+  }
+
+  #home-slider {
+    display: none;
+  }
+
+  #home-slider.flex-control-nav {
+    display: none;
+  }
+
+  #home-slider.flex-direction-nav {
+    display: none;
+  }
+
+  #home-slider.flex-direction-nav li a {
+    width: 100%;
+    height: 100%;
+  }
+
+  #home-slider.flex-direction-nav li a span {
+    display: none;
+  }
+
+  #home-slider.flex-direction-nav li a span.active {
+    display: block;
+  }
+
+  #home-slider.flex-direction-nav li a span:first-child {
+    display: none;
+  }
+
+  #home-slider.flex-direction-nav li a span:last-child {
+    display: none;
+  }
+
+  #home-slider.flex-direction-nav li a span.active {
+    display: none;
+  }
+
+  #home-slider.flex-direction-nav li a span:first-child {
+    display: none;
+  }
+
+  #home-slider.flex-direction-nav li a span:last-child {
+
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: $text;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-50%);
+    }
+
+  }
+}
+
 
 .home-slider .slide-title {
   font-size: 30px;
@@ -468,7 +542,7 @@ label input {
 
 .home-slider .slide-subtitle {
   font-size: 20px;
-  color: $heading;
+  color: $header;
   margin-bottom: 30px;
   display: block;
 }
@@ -499,7 +573,7 @@ label input {
 
 h1 {
   text-align: center;
-  color: $heading;
+  color: $header;
   font-size: 40px;
   font-weight: 300;
   margin-bottom: 30px;
@@ -511,10 +585,8 @@ h1 {
 
 }
 
-a {
-  text-decoration: none;
-  color: $heading;
-}
+
+
 
 li.menu-item a:hover {
   text-decoration: none;
@@ -703,7 +775,7 @@ section header .section-title {
 
 section header .all {
   float: right;
-  color: #666a6c;
+  color: $text;
 }
 
 .page {
@@ -712,18 +784,11 @@ section header .all {
 
 .page .entry-title {
   font-size: 60px;
-  font-size: 4.2857142857em;
   font-weight: 100;
   margin-bottom: 10px;
 }
 
-.page .price {
-  font-size: 30px;
-  font-size: 2.1428571429em;
-  color: #45b77d;
-  display: block;
-  margin-bottom: 30px;
-}
+
 
 .page .product-images figure,
 .page .product-images>a {
@@ -773,7 +838,6 @@ section header .all {
 
 .page .addtocart-bar {
   margin-top: 50px;
-  background: white;
   padding: 10px 20px;
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -795,7 +859,6 @@ section header .all {
 .page .addtocart-bar form select {
   padding: 10px 50px 10px 10px;
   margin-left: 10px;
-  background: #e9e9e9 url(images/select.png) no-repeat right center;
   border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -808,34 +871,62 @@ section header .all {
 
 .page ul,
 .page ol {
-  border-left: 3px solid #45b77d;
   padding-left: 30px;
   margin-left: 30px;
   margin: 30px 0 30px 30px;
 }
 
 .site-footer {
-  background-color: #2b2b2b;
+  background-color: $backgroundHover;
   padding: 50px 0;
   font-size: 12px;
-  font-size: 0.8571428571em;
 }
 
-.site-footer a {
-  color: #898e90;
-  transition: 0.3s ease;
+.fa.fa-facebook {
+  color: blue;
+  font-weight: bold;
+
+  &:hover {
+    color: red;
+  }
 }
 
-.site-footer a:hover {
-  color: #45b77d;
+.fa.fa-linkedin {
+  color: #0077b5;
+  font-weight: bold;
+
+  &:hover {
+    color: red;
+  }
 }
+
+.fa.fa-github {
+  color: gray;
+  font-weight: bold;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.fa.fa-instagram {
+  color: red;
+  font-weight: bold;
+
+  &:hover {
+    color: red;
+  }
+}
+
+
+
 
 .site-footer .widget {
   margin-bottom: 30px;
 }
 
 .site-footer .widget-title {
-  color: white;
+  color: $header;
   font-size: 15px;
   font-size: 1.0714285714rem;
   font-weight: 400;
@@ -865,7 +956,7 @@ section header .all {
 
 .site-footer .newsletter-form input[type=text] {
   padding: 10px 20px;
-  color: white;
+  color: $text;
   width: 70%;
   border-width: 2px;
   margin-right: 10px;
@@ -874,25 +965,20 @@ section header .all {
 
 .site-footer .newsletter-form input[type=text]:hover,
 .site-footer .newsletter-form input[type=text]:focus {
-  border-color: #45b77d;
+  border-color: $header;
 }
 
 .site-footer .newsletter-form input[type=submit] {
   width: 20%;
-  border: 2px solid #45b77d;
+  border: 2px solid $header;
   transition: 0.3s ease;
 }
 
 .site-footer .newsletter-form input[type=submit]:hover,
 .site-footer .newsletter-form input[type=submit]:focus {
-  background-color: #69c697;
+  background-color: $background;
 }
 
 .site-footer .social-links a {
   line-height: 2;
-}
-
-.site-footer .social-links a:hover {
-  background-color: white;
-  color: #898e90;
 }
