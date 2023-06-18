@@ -440,6 +440,29 @@ label input {
     width: 100%;
   }
 }
+h1 {
+  text-align: center;
+  color: rgb(46, 120, 70);
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(46, 120, 70);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(238, 52, 5);
+}
+
 .product-list {
   margin: 0 -15px;
   *zoom: 1;
